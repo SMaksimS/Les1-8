@@ -1,0 +1,137 @@
+
+<meta charset ="utf-8">
+<script type="text/javascript">
+
+
+	//Les1
+/*	var a = 1 , b = 1 , c , d;
+c = ++ a ; alert ( c ); // 2 (инкрементированность) x++(постфикс) -знач. операнда возвращается, а затем увел.на ед.. Префиксная форма с оператором перед операндом ++х, знач. операнда возвращ-ся увеличенным на ед. 
+d = b ++; alert ( d ); // 1  (декрементированность) X-- 
+c = ( 2 + ++ a ); alert ( c ); // 5 склад. из предыдущ.знач.
+d = ( 2 + b ++); alert ( d ); // 4 аналогично
+alert ( a ); // 3 
+alert ( b ); // 3
+
+	//2les
+var a = 2;
+var x = 1 + ( a *= 2 );
+x = 5;
+*/
+
+//3les
+
+var a =parseInt(prompt("Please, enter the number"));
+var b =parseInt(prompt("Please, enter the second number"));
+
+if (a > 0 && b > 0) {
+alert("Отрицательное");
+}
+else if(a < 0 && b < 0) {
+
+	alert("Произведение");
+}
+else if(a == 0 && b == 0){
+
+	alert("Положительное");
+}
+else { 
+alert("Неизвестное");
+}
+
+//les4
+var a = "11"
+switch  (a) {
+case  "2":
+alert("мимо");
+break;
+case  "6":
+alert("снова мимо");
+break;
+case  "11":
+alert("Бинго");
+break;
+case "0":
+alert("что-то никак не везет");
+break;
+case "3":
+alert("и снова неудача");
+break;
+}
+
+//les5
+function number(a, b,nameOperation){
+	
+	if (nameOperation==" сложение")
+		alert((a+b) + " Будет, " +  nameOperation);
+	else if (nameOperation==" вычитание")
+	alert((a-b) + " Будет, " +  nameOperation);
+	else if (nameOperation==" умножение")
+	alert((a*b) + " Будет, " +  nameOperation);
+	else if(nameOperation==" деление")
+	alert((a-b) + " Будет, " +  nameOperation);
+	else
+	alert("undefinded")
+
+ 	
+	return;
+}
+
+number(50,10, " сложение")
+number(150,60, " вычитание")
+number(5,5, " умножение")
+number(60,5, " деление")
+
+//Les6
+
+var arg1 = prompt("enter smth number");
+var arg2 = prompt("enter yet one number");
+var operation = prompt("What kind will be operation + - * / ?");
+function mathOperation(arg1,arg2,operation){
+
+switch(operation){
+case "*":
+	alert(parseInt(arg1) * parseInt(arg2));
+	break;
+case "+":
+alert(parseInt(arg1) + parseInt(arg2));
+break;
+case "-":
+alert(parseInt(arg1) -parseInt(arg2));
+break;
+case "/":
+alert(parseInt(arg1) / parseInt(arg2));
+	break;
+	default: 
+	alert(NoN)
+	break;
+
+}
+ }
+mathOperation(arg1,arg2,operation)
+
+//les7
+/*null == 0; // false. Null- объект и в это же время у него отсутствует объект. alert(typeof null), а 0- число, а не логическая переменная. Null не может быть реализацией к/л объекта,потому что у него отсутствуют значения. Совершенно лишен значений(null). Тип null.Null — умышленное отсутствие значения.	Проверка на null 
+			!null //вернёт true
+
+			!'я строка'  //вернёт false
+
+			!['я','массив'] //вернёт false
+
+			!{я:'объект'} //вернёт false
+
+
+				null == 0 //false
+				null > 0  //false
+				null >= 0 //true
+*/
+//Les8
+function power(val,pow){
+if (pow !=1){
+	return val * power(val, pow-1);
+ 	}else{
+ 		return val;
+  }		
+}
+alert(power(6,8))
+
+			</script>
