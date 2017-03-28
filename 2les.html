@@ -5,12 +5,18 @@
 
 	//Les1
 /*	var a = 1 , b = 1 , c , d;
-c = ++ a ; alert ( c ); // 2 (инкрементированность) x++(постфикс) -знач. операнда возвращается, а затем увел.на ед.. Префиксная форма с оператором перед операндом ++х, знач. операнда возвращ-ся увеличенным на ед. 
-d = b ++; alert ( d ); // 1  (декрементированность) X-- 
-c = ( 2 + ++ a ); alert ( c ); // 5 склад. из предыдущ.знач.
-d = ( 2 + b ++); alert ( d ); // 4 аналогично
-alert ( a ); // 3 
-alert ( b ); // 3
+
+c = ++ a ; alert ( c ); // 2 (инкрементированность) X++.Увел.на ед., а затем Операнда возвращает знач.
+
+d = b ++; alert ( d ); // 1  (декрементированность) X--. Сначала происходит возвращение знач., а потом выполняется инкрементирование
+
+c = ( 2 + ++ a ); alert ( c ); // 5 а уже инкрементированый инкрементируется еще раз,получается 3. Прибавляем 2. 
+
+d = ( 2 + b ++); alert ( d ); // 4 b уже инркементированный, т.е. равен 2. Прибавляем 2.
+
+alert ( a ); // 3   остается равен 3
+
+alert ( b ); // 3   b инкрементировался после возвращния значения и стал равен 3
 
 	//2les
 var a = 2;
@@ -39,22 +45,41 @@ alert("Неизвестное");
 }
 
 //les4
-var a = "11"
-switch  (a) {
+var a = 15;
+switch  (window.prompt()) {
+case  "1":
+document.write("1"); // or console.log or alert
 case  "2":
-alert("мимо");
+document.write("2");
+case  "3":
+document.write("3");
+case "4":
+document.write("4");
+case "5":
+document.write("5");
+case "6":
+document.write("6");
+case  "7":
+document.write("7");
+case  "8":
+document.write("8");
+case  "9":
+document.write("9");
+case "10":
+document.write("10");
+case "11":
+document.write("11");
+case "12":
+document.write("12");
+case "13":
+document.write("13");
+case "14":
+document.write("14");
+case "15":
+document.write("15");
 break;
-case  "6":
-alert("снова мимо");
-break;
-case  "11":
-alert("Бинго");
-break;
-case "0":
-alert("что-то никак не везет");
-break;
-case "3":
-alert("и снова неудача");
+default:
+alert("Такого значения нет")
 break;
 }
 
@@ -72,8 +97,7 @@ function number(a, b,nameOperation){
 	else
 	alert("undefinded")
 
- 	
-	return;
+ 	return;
 }
 
 number(50,10, " сложение")
@@ -102,7 +126,7 @@ case "/":
 alert(parseInt(arg1) / parseInt(arg2));
 	break;
 	default: 
-	alert(NoN)
+	alert(NaN)
 	break;
 
 }
@@ -110,6 +134,7 @@ alert(parseInt(arg1) / parseInt(arg2));
 mathOperation(arg1,arg2,operation)
 
 //les7
+
 /*null == 0; // false. Null- объект и в это же время у него отсутствует объект. alert(typeof null), а 0- число, а не логическая переменная. Null не может быть реализацией к/л объекта,потому что у него отсутствуют значения. Совершенно лишен значений(null). Тип null.Null — умышленное отсутствие значения.	Проверка на null 
 			!null //вернёт true
 
@@ -124,9 +149,10 @@ mathOperation(arg1,arg2,operation)
 				null > 0  //false
 				null >= 0 //true
 */
-//Les8
+//Les8 Рекурсия
+
 function power(val,pow){
-if (pow !=1){
+	if (pow !=1){
 	return val * power(val, pow-1);
  	}else{
  		return val;
